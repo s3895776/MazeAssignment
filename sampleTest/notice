@@ -1,0 +1,27 @@
+Take note that for m1-m3 tests, the tests are assuming:
+The environment is a fixed size of 20x20
+Prioritise node creation by up, right, down, up.
+Current tests are assuming the robot will start from goal 
+and will try to make it to S by prioritising up, right, down, left.
+
+Test01: randomised input 
+Test01half: sameinput but it ends in newline. The output should be the same as Test01. 
+Test02: The wall: The output is the most straightforward way of determining the direction 
+the nodes will go in.
+Test03: Given two different paths, the program should find the shortest way to get to the start. 
+Test04: Checking that the algorithms in pathplanner won't access out of bounds environment.
+In particular, getAdjacentNodes and getReachableNodes should not access out of bounds.
+Test05: Checking the algorithm will return the array as a 20x20 fixed size and also not print a path. (Do not include)
+Test06: Checking the algorithm will not print a path. (Returns the same maze)
+Test07: A messed up shape should be padded out with whitespace. Note that expected output has that whitespace. 
+Test08: Check for dynamic size input, whitespace padding, path finding and out of bounds checking
+(the amount of empty space characters '.' needs to be above 100 for dynamic resizing of NodeList).
+Test09: Only a newline for input (output should be just a newline)
+Test10: Check for dynamic size input, whitespace padding, out of bounds checking and no path found. (Do not include)
+Test11: large input to test dynamic memory allocation
+Test12: testing if program still works if rows > columns 
+Test13: extremely large input to further test it. 
+Test13half: same as test 13 but has a newline at the end. Same output as test 13. 
+Test14: Put only eoF into console.
+Test15: Test readenvstdin reading when the EOF is in line and the input size is unequal to the amount of memory allocated. 
+Test16: Test readenvstdin reading when the last line is the largest width and ends in EOF. 
